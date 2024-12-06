@@ -11,7 +11,7 @@ import { FoodService } from './food.service';
 import { CreateFoodDto } from './dto/create-food.dto';
 import { UpdateFoodDto } from './dto/update-food.dto';
 
-@Controller('food')
+@Controller('/menu/food')
 export class FoodController {
   constructor(private readonly foodService: FoodService) {}
 
@@ -21,7 +21,7 @@ export class FoodController {
     return this.foodService.create(createFoodDto);
   }
 
-  @Get()
+  @Get('')
   getAllFood() {
     return this.foodService.findAll();
   }
